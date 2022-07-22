@@ -61,10 +61,32 @@ function getWeatherInfo(city){
             let content = getWeather.responseText;
             if(content != '' && (content)) {
                 currentData = JSON.parse(getWeather.responseText).current;
-                console.log(currentData)
+                console.log(currentData);
+                let weatherText=currentData.condition.text
+                let weatherImg=currentData.condition.icon
+                let degree =currentData.feelslike_c
+                let humidity = currentData.humidity
+                let wind= currentData.gust_mph
+                updateWeather(weatherText,weatherImg,degree,humidity,wind,city);
             } 
             else {console.log("Not loaded!")}
         }
     }
     getWeather.send();
+}
+
+function updateWeather(text, img,deg,hum,wind,city) {
+    let weatherState = document.getElementById("text")
+    let weatherImg = document.getElementById("img-avatar")
+    let degree = document.getElementById("degree")
+    let humidity = document.getElementById("humidity")
+    let winds = document.getElementById("wind")
+    let name = document.getElementById("name")
+
+    weatherState.innerHTML = text
+    weatherImg.src= img
+    degree.innerHTML =deg +"°"
+    humidity.innerHTML =hum
+    winds.innerHTML =wind
+    name.innerHTML =city
 }

@@ -1,14 +1,90 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    color: #555;
+    font-family: "Font Awesome 6 Free";
+
 }
 
 html {
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: 2rem auto;
 }
 
 
-.form-floating{
-    margin: 2em 0;
+
+.weather-header {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    justify-content: center;
+    margin: auto;
 }
+
+
+
+select {
+    border-radius: 0.4rem;
+    height: 2rem;
+    padding: 0 0.35rem;
+}
+
+.getCities{
+    margin: 0 1rem;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 9rem;
+    background-color: rgba(67, 153, 214, 0.333);
+    border: 1px solid rgba(19, 46, 65, 0.333);;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem auto;
+    border: 1px solid saddlebrown;
+    width: 400px;
+    border-radius: 1rem;
+}
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.weather-content img {
+    width: 15%;
+    margin: auto;
+}
+
+.degree {
+    font-size: 3rem;
+}
+
+.text{
+    font-size: 2rem;
+}
+
+.weather-texts{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 1rem 0;
+}
+
+.weather-texts i {
+    display: flex;
+    margin: 1rem;
+    color: #555;
+}
+
+.weather-texts i p{
+    margin: 0 1rem;
+}
+
